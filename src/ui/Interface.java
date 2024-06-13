@@ -56,7 +56,7 @@ public class Interface {
 	@FXML private TextArea console;				//控制台，用于显示各种信息
 	@FXML private StackPane stackPane;			//控制按钮面板的容器
 	
-	private DirectedGraph graph;				//有向图
+	DirectedGraph graph;				//有向图
 	private File dataFile;						//源文本文件对象
 	
 	private static HashMap<String, VertexVisual> points = new HashMap<>();				//<顶点名称,绘图面板中对应的绘图顶点>
@@ -621,7 +621,7 @@ public class Interface {
 	 * @param word2 第二个单词
 	 * @return 桥接词查询结果
 	 */
-	private String queryBridgeWords(String word1, String word2) {
+    String queryBridgeWords(String word1, String word2) {
 		ArrayList<Vertex> vertices = this.graph.getVertices();	//获取有向图顶点列表
 		Vertex a = null;
 		Vertex b = null;
@@ -735,7 +735,7 @@ public class Interface {
 	 * @param endName 路径终点名称
 	 * @return 最短路径的长度信息
 	 */
-	private String calcShortestPath(String startName, String endName) {
+    String calcShortestPath(String startName, String endName) {
 		ArrayList<Vertex> vertices = this.graph.getVertices();
 		Vertex startVertex = null;
 		Vertex endVertex = null;

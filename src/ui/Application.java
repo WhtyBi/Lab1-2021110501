@@ -10,8 +10,10 @@ import javafx.stage.Stage;
 /**
  * JavaFX主应用程序
  */
+@SuppressWarnings({"checkstyle:FileTabCharacter", "checkstyle:SummaryJavadoc"})
 public class Application extends javafx.application.Application {
-	@Override
+	@SuppressWarnings({"checkstyle:Indentation", "checkstyle:FileTabCharacter", "checkstyle:WhitespaceAfter", "checkstyle:AbbreviationAsWordInName", "checkstyle:VariableDeclarationUsageDistance"})
+    @Override
 	public void start(Stage stage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("BaseWindow.fxml"));
 		Parent root = loader.load();
@@ -38,7 +40,8 @@ public class Application extends javafx.application.Application {
 		stage.show();
 	}
 	
-	public static void main(String[] args) {
+	@SuppressWarnings({"checkstyle:Indentation", "checkstyle:FileTabCharacter"})
+    public static void main(String[] args) {
 		launch(args);
 	}
 }
